@@ -1,0 +1,26 @@
+---
+title: "Bug set enrichment analysis"
+abstract: >
+    A scratch space to try some "BSEA" on curatedMetagenomicData
+output:
+    BiocStyle::html_document
+vignette: >
+    %\VignetteIndexEntry{BSEA}
+    %\VignetteEngine{knitr::rmarkdown}
+    %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(cache = TRUE)
+```
+
+```{r}
+eset <- VincentC_2016.metaphlan_bugs_list.stool()
+View(pData(eset))
+```
+
+```{r}
+esl <- curatedMetagenomicData("*metaphlan*", dryrun=FALSE)
+```
+
