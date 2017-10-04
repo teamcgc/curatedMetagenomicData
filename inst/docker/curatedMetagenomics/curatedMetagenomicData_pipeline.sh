@@ -32,11 +32,13 @@ if [ ! "$(ls -A $pc)" ]; then
 fi
 
 
+if [ -z "$OUTPUT_PATH" ]
+then
+    echo "Working in ${OUTPUT_PATH}"
+    mkdir -p ${OUTPUT_PATH}
 
-echo "Working in ${OUTPUT_PATH}"
-mkdir -p ${OUTPUT_PATH}
-
-cd ${OUTPUT_PATH}
+    cd ${OUTPUT_PATH}
+fi
 
 # while [ "$runs" ] ; do
 # 	iter=${runs%%;*}
